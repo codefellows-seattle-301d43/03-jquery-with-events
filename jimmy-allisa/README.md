@@ -13,9 +13,10 @@ Create necessary files, clone starter code, and complete the to-do's.
 HTML, CSS, JS, and the jQuery library
 
 ## Change Log
-09-06-18 11:29am - Completed handle author filter
-09-06-18 10:08am - Completed populate filters
-09-06-18 9:56am - Completed to-do on article.js and started articleView.js
+09-06-18 11:43am - Completed handle category filter.
+09-06-18 11:29am - Completed handle author filter.
+09-06-18 10:08am - Completed populate filters.
+09-06-18 9:56am - Completed to-do on article.js and started articleView.js.
 09-06-18 9:39am - Set-up directory and cloned started code files.
 
 
