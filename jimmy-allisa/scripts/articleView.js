@@ -90,8 +90,12 @@ articleView.setTeasers = function() {
   // Done: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   $('.read-on').on('click', function(e) {
     e.preventDefault();
-    $(this).prev('.article-body').children().show();
-    $(this).hide();
+    $(this).prev('.article-body').children().toggle();
+    if($(this).text().charAt(0) === 'R'){
+      $(this).html('Show less &rarr;');
+    }else{
+      $(this).html('Read on &rarr;')
+    }
   });
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 };

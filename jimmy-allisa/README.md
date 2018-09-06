@@ -13,6 +13,7 @@ Create necessary files, clone starter code, and complete the to-do's.
 HTML, CSS, JS, and the jQuery library
 
 ## Change Log
+09-06-18 12:37pm - Completed STRETCH GOAL.
 09-06-18 12:26pm - Completed set teasers.
 09-06-18 12:12pm - Completed handle main nav.
 09-06-18 11:43am - Completed handle category filter.
