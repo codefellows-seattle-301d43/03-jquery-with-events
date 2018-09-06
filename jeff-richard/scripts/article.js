@@ -17,9 +17,10 @@ Article.prototype.toHtml = function() {
   if (!this.publishedOn) {
     $newArticle.addClass('draft');
   }
-  // $newArticle.attr('data-category', this.category);
-  // TODO: Use jQuery to add the author name as an additional data-attribute of the newly cloned article. Doing so will allow us to use selectors to target articles based on who wrote them.
+  $newArticle.attr('data-category', this.category);
+  // DONE **TODO: Use jQuery to add the author name as an additional data-attribute of the newly cloned article. Doing so will allow us to use selectors to target articles based on who wrote them.
 
+  $newArticle.attr('data-author', this.author);
   $newArticle.find('address a').html(this.author);
   $newArticle.find('address a').attr('href', this.authorUrl);
   $newArticle.find('h1:first').html(this.title);
