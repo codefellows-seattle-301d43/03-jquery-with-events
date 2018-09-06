@@ -13,13 +13,13 @@ articleView.populateFilters = function() {
       // Start by grabbing the author's name from `this` article element, and then use that bit of text to create the option tag (in a variable named `optionTag`) that we can append to the #author-filter select element.
       authorName = $(this).attr('data-author');
 
-      // TODO: Refactor this concatenation using a template literal.
-      optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
+      // DONE** TODO: Refactor this concatenation using a template literal.
+      optionTag = `<option value="${authorName}">${authorName}</option>`;
 
-      if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
+      if ($(`#author-filter option[value="${authorName}"]`).length === 0) {
         $('#author-filter').append(optionTag);
       }
-
+      
       // REVIEW: Similar to the above, but...
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
       category = $(this).attr('data-category');
@@ -52,20 +52,19 @@ articleView.handleAuthorFilter = function() {
 };
 
 articleView.handleCategoryFilter = function() {
-  // TODO: Just like we do for #author-filter above, we should handle change events on the #category-filter element.
+  // DONE** TODO: Just like we do for #author-filter above, we should handle change events on the #category-filter element.
   $('#category-filter').on('change', function(){
     if ($(this).val()) {
-      console.log($(this));
+      // When an option with a value is selected, hide all the articles, then reveal the matches.
       $('article').hide();
       $(`article[data-category='${$(this).val()}']`).fadeIn();
     } else {
+      // When the blank (default) option is selected, show all the articles, except for the template.
       $('article').not(':first').show();
     }
+    // Be sure to reset the #author-filter while you are at it!
+    $('#author-filter').val('');
   })
-  // When an option with a value is selected, hide all the articles, then reveal the matches.
-  // When the blank (default) option is selected, show all the articles, except for the template.
-  // Be sure to reset the #author-filter while you are at it!
-  $('#author-filter').val('');
 };
 
 articleView.handleMainNav = function() {
@@ -81,7 +80,7 @@ articleView.setTeasers = function() {
   // REVIEW: Hide elements beyond the first 2 in any article body.
   $('.article-body *:nth-of-type(n+2)').hide();
 
-  // DONE** TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
+  // TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 };
 
