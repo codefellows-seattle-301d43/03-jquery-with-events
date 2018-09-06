@@ -32,6 +32,7 @@ articleView.populateFilters = function() {
       }
     }
   });
+  $('#about').hide();
 };
 
 articleView.handleAuthorFilter = function() {
@@ -75,7 +76,15 @@ articleView.handleMainNav = function() {
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
   // REVIEW: Now trigger a click on the first .tab element, to set up the page.
-  $('nav .tab:first').click();
+  $('nav .tab:first').click(() => {
+    $('#articles').fadeIn('slow');
+    $('#about').hide();
+  });
+
+  $('nav .tab:nth-child(2)').click(() => {
+    $('#articles').hide();
+    $('#about').fadeIn('slow');
+  });
 };
 
 articleView.setTeasers = function() {
@@ -91,4 +100,5 @@ $(document).ready(function() {
   articleView.populateFilters();
   articleView.handleAuthorFilter();
   articleView.handleCategoryFilter();
+  articleView.handleMainNav();
 })
