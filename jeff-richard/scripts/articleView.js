@@ -24,10 +24,10 @@ articleView.populateFilters = function() {
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
       category = $(this).attr('data-category');
 
-      // TODO: Refactor this concatenation using a template literal.
-      optionTag = '<option value="' + category + '">' + category + '</option>';
+      // DONE**TODO: Refactor this concatenation using a template literal.
+      optionTag = `<option value="${category}">${category}</option>`;
 
-      if ($('#category-filter option[value="' + category + '"]').length === 0) {
+      if ($(`#category-filter option[value="${category}"]`).length === 0) {
         $('#category-filter').append(optionTag);
       }
     }
@@ -80,7 +80,6 @@ articleView.handleMainNav = function() {
   });
 
   $('nav .tab:nth-child(2)').click(() => {
-    console.log('about clicked');
     $('article').hide();
     $('#filters').hide();
     $('#about').show();
@@ -90,6 +89,9 @@ articleView.handleMainNav = function() {
 articleView.setTeasers = function() {
   // REVIEW: Hide elements beyond the first 2 in any article body.
   $('.article-body *:nth-of-type(n+2)').hide();
+
+  // DONE**TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
+  // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
   $('#articles').on('click', '.read-on', function (e) {
     e.preventDefault();
     $(this).parent().find('.article-body *:nth-of-type(n+2)').slideToggle();
@@ -101,9 +103,6 @@ articleView.setTeasers = function() {
     $(this).parent().find('.article-body *:nth-of-type(n+2)').slideToggle();
     $(this).text('Read More').toggleClass('read-on read-less');
   });
-
-  // TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
-  // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 };
 
 // DONE** TODO: Call all of the above functions, once we are sure the DOM is ready.
