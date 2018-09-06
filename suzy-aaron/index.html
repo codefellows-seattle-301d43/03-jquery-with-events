@@ -78,8 +78,9 @@
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
   <!-- TODO: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
 
   <!-- COMMENT: Explain the ordering of your script files. -->
-  <!-- PUT YOUR RESPONSE HERE -->
+  <!-- Jquery comes first because we want it to load before we utilize it in our article and article view. Then we want blog articles to go nedt because article.js is referencing from the blog articles. Then article needs to come before article view because article view is dependent $newArticle and if we switch the order it will become undefined. -->
 </body>
 </html>
