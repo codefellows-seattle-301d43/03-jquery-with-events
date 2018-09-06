@@ -14,7 +14,6 @@ articleView.populateFilters = function() {
       authorName = $(this).attr('data-author');
 
       // DONE: Refactor this concatenation using a template literal.
-      // optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
       optionTag = `<option value="${authorName}">${authorName}</option>`;
 
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
@@ -26,7 +25,6 @@ articleView.populateFilters = function() {
       category = $(this).attr('data-category');
 
       // DONE: Refactor this concatenation using a template literal.
-      // optionTag = '<option value="' + category + '">' + category + '</option>';
       optionTag = `<option value="${category}">${category}</option>`;
 
       if ($('#category-filter option[value="' + category + '"]').length === 0) {
@@ -72,7 +70,7 @@ articleView.handleCategoryFilter = function() {
 };
 
 articleView.handleMainNav = function() {
-  // TODO: Add an event handler to nav elements that will power the Tabs feature.
+  // DONE: Add an event handler to nav elements that will power the Tabs feature.
   // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
