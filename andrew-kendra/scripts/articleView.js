@@ -56,9 +56,7 @@ articleView.handleCategoryFilter = function() {
   // When the blank (default) option is selected, show all the articles, except for the template.
   // Be sure to reset the #author-filter while you are at it!
   $('#category-filter').on('change', function() {
-    
     if ($(this).val()) {
-    
       $('article').hide();
       $(`article[data-category="${$(this).val()}"]`).fadeIn();
     } else {
@@ -66,7 +64,6 @@ articleView.handleCategoryFilter = function() {
     }
     $('#author-filter').val('');
   });
-
 };
 
 articleView.handleMainNav = function() {
@@ -74,7 +71,7 @@ articleView.handleMainNav = function() {
   // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
-  $('.tab').on('click', function() {  
+  $('.tab').on('click', function() {
     let tabValue = $(this).data('content');
     console.log(tabValue);
     $('.tab-content').hide();
