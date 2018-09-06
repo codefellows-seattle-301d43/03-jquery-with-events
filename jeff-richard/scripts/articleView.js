@@ -73,7 +73,10 @@ articleView.handleMainNav = function() {
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
   // REVIEW: Now trigger a click on the first .tab element, to set up the page.
-  $('nav .tab:first').click();
+  $('nav .tab:first').click(() => {
+    $('article').not(':first').show();
+    $('#about').hide();
+  });
 };
 
 articleView.setTeasers = function() {
@@ -89,4 +92,5 @@ $(document).ready(function() {
   articleView.populateFilters();
   articleView.handleAuthorFilter();
   articleView.handleCategoryFilter();
+  articleView.handleMainNav();
 })
