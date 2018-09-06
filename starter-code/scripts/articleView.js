@@ -92,7 +92,15 @@ articleView.setTeasers = function() {
   $('article').on('click', 'a.read-on', (e) => {
     e.preventDefault();
     $(e.target).parent().find('*').fadeIn();
-    $(e.target).hide();
+    $(e.target).addClass('show-less');
+    $(e.target).text('Show Less →');
+  });
+
+  $('article').on('click', 'a.show-less', (e) => {
+    e.preventDefault();
+    $('.article-body *:nth-of-type(n+2)').hide();
+    $(e.target).removeClass('show-less');
+    $(e.target).text('Read On →');
   });
 };
 
