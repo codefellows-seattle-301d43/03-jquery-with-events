@@ -93,7 +93,7 @@ articleView.setTeasers = function() {
     e.preventDefault();
     $(e.target).parent().find('*').fadeIn();
     $(e.target).addClass('show-less');
-    $(e.target).text('Show Less →');
+    $(e.target).text('Show Less ←');
   });
 
   $('article').on('click', 'a.show-less', (e) => {
