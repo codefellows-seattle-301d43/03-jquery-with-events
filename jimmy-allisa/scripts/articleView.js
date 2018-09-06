@@ -71,7 +71,7 @@ articleView.handleCategoryFilter = function() {
 
 articleView.handleMainNav = function() {
   // Done: Add an event handler to nav elements that will power the Tabs feature.
-  $('li').on('click', function() {
+  $('nav ul li').on('click', function() {
     // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
     $('.tab-content').hide();
     // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
@@ -87,7 +87,12 @@ articleView.setTeasers = function() {
   // REVIEW: Hide elements beyond the first 2 in any article body.
   $('.article-body *:nth-of-type(n+2)').hide();
 
-  // TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
+  // Done: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
+  $('.read-on').on('click', function(e) {
+    e.preventDefault();
+    $(this).prev('.article-body').children().show();
+    $(this).hide();
+  });
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 };
 

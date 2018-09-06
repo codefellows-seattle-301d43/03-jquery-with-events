@@ -1,7 +1,7 @@
 # Lab 03: jQuery Events
 
 **Author**: Jimmy Nguyen and Allisa LeBeuf
-**Version**: 1.1.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 1.1.1 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 Add event handlers using jQuery, refactor code.
@@ -13,7 +13,8 @@ Create necessary files, clone starter code, and complete the to-do's.
 HTML, CSS, JS, and the jQuery library
 
 ## Change Log
-09-06-18 12:12pm - completed handle main nav.
+09-06-18 12:26pm - Completed set teasers.
+09-06-18 12:12pm - Completed handle main nav.
 09-06-18 11:43am - Completed handle category filter.
 09-06-18 11:29am - Completed handle author filter.
 09-06-18 10:08am - Completed populate filters.
@@ -22,4 +23,4 @@ HTML, CSS, JS, and the jQuery library
 
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+OUR BRAINS. PLZ HELP. Also Noah.
