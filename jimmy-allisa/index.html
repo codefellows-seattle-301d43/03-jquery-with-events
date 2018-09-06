@@ -77,9 +77,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
-  <!-- TODO: Link our new script file in. -->
+  <!-- Done: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
 
   <!-- COMMENT: Explain the ordering of your script files. -->
-  <!-- PUT YOUR RESPONSE HERE -->
+  <!-- blogArticles.js is listed first because we want the raw article objects to load first and because article.js references those articles. articleView.js should be listed last because we set the data attributes that references from article.js.-->
 </body>
 </html>
