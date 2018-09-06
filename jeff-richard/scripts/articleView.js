@@ -74,8 +74,16 @@ articleView.handleMainNav = function() {
 
   // REVIEW: Now trigger a click on the first .tab element, to set up the page.
   $('nav .tab:first').click(() => {
+    $('#filters').show();
     $('article').not(':first').show();
     $('#about').hide();
+  });
+
+  $('nav .tab:nth-child(2)').click(() => {
+    console.log('about clicked');
+    $('article').hide();
+    $('#filters').hide();
+    $('#about').show();
   });
 };
 
