@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Alex Stoforandov and Jeremy Beck
-**Version**: 1.0.2
+**Version**: 1.1.0
 
 ## Overview
 
@@ -17,8 +17,9 @@ The app is built using HTML, CSS, Javascript, JQuery library and SMACSS methodol
 
 ## Change Log
 
-09-06-2018 9:28am - Add filtering methods template to the page.
-09-06-2018 9:11am - Readme created, project started.
+09-06-2018 10:04am - Implement filtering by author name.
+09-06-2018 09:28am - Add filtering methods template to the page.
+09-06-2018 09:11am - Readme created, project started.
 
 ## Credits and Collaborations
 
