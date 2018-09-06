@@ -92,13 +92,13 @@ articleView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('#articles').on('click', '.read-on', function (e) {
     e.preventDefault();
-    $(this).parent().find('.article-body *:nth-of-type(n+2)').show();
+    $(this).parent().find('.article-body *:nth-of-type(n+2)').slideToggle();
     $(this).text('Read Less').toggleClass('read-on read-less');
   });
 
   $('#articles').on('click', '.read-less', function (e) {
     e.preventDefault();
-    $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+    $(this).parent().find('.article-body *:nth-of-type(n+2)').slideToggle();
     $(this).text('Read More').toggleClass('read-on read-less');
   });
 
