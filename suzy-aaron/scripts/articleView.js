@@ -98,6 +98,7 @@ articleView.setTeasers = function() {
     e.preventDefault();
     console.log($(this));
     $(this).parent().find('.article-body p').fadeIn('slow');
+    $(this).hide();
   });
 
 
