@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Lab 3</title>
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 </head>
+
 <body>
   <header class="clearfix">
     <section class="heading-group-h1">
@@ -77,9 +79,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
-  <!-- TODO: Link our new script file in. -->
+  <!-- DONE: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
 
   <!-- COMMENT: Explain the ordering of your script files. -->
-  <!-- PUT YOUR RESPONSE HERE -->
+  <!-- We need blogArticles.js 'cause it has our data inside:
+  all articles with content and other parameters. Next we attach article.js where our Article constructor lives to create the model of our blog in memory plus render it to the page. The last one contains filtering functionality we apply to our articles which are already on the page. -->
 </body>
+
 </html>
