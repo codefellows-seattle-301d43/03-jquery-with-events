@@ -64,7 +64,6 @@ articleView.handleCategoryFilter = function() {
   // When the blank (default) option is selected, show all the articles, except for the template.
   // Be sure to reset the #author-filter while you are at it!
   $('#category-filter').on('change', function() {
-
     let $articles = $('article');
     let categoryName = $(this).val();
     if (categoryName) {
@@ -88,10 +87,8 @@ articleView.handleMainNav = function() {
   // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
   $('.tab').on('click', function() {
-    console.log('clicked');
     let $tabContent = $('section.tab-content');
     let tabName = $(this).attr('data-content');
-    console.log(tabName);
 
     $tabContent.hide();
     $tabContent
@@ -112,8 +109,12 @@ articleView.setTeasers = function() {
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
   $('#articles').on('click', '.read-on', function(event) {
     event.preventDefault();
-    $(this).parents('article').find('.article-body *').show();
-  })
+    $(this)
+      .parents('article')
+      .find('.article-body *')
+      .show();
+    $(this).hide();
+  });
 };
 
 // TODO: Call all of the above functions, once we are sure the DOM is ready.
